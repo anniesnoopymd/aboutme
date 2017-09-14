@@ -344,6 +344,8 @@ function bannerSwitcher() {
       <input type="radio" id="banner2" class="sec-1-input" name="banner">
       <input type="radio" id="banner3" class="sec-1-input" name="banner">
       <input type="radio" id="banner4" class="sec-1-input" name="banner">
+      <input type="radio" id="banner5" class="sec-1-input" name="banner">
+      <input type="radio" id="banner6" class="sec-1-input" name="banner">
       <div class="slider">
         <div id="top-banner-1" class="banner">
           <div class="banner-inner-wrapper">
@@ -357,7 +359,7 @@ function bannerSwitcher() {
         </div>
         <div id="top-banner-2" class="banner">
           <div class="banner-inner-wrapper">
-            <h2 class="title">My name is Ya-Yun Tsai.<br>
+            <h2 class="title bannder2-title">My name is Ya-Yun Tsai.<br><br>
             I am a Front End Developer.</h2>
             <img src="images/me.png" alt="">
 
@@ -366,8 +368,8 @@ function bannerSwitcher() {
         </div>
         <div id="top-banner-3" class="banner">
           <div class="banner-inner-wrapper">
-            <h2>Here We Are</h2>
-            <h1>We Are<br>MoGo</h1>
+            <h2 class="title">jQuery/VueJS/HTML/CSS</h2>
+            <h1 class="title">Are languages I'm interested in.</h1>
 
           </div>
         </div>
@@ -389,6 +391,57 @@ function bannerSwitcher() {
       </nav>
     </div>
   </section>
+
+  <section id="section_about">
+    <div class="container">
+      <p>WANNA KNOW MORE ABOUT ME?</p>
+      <div class="row">
+          <div class="col-sm-12">
+            <div class="col-sm-2 circle circle1"><a href="https://medium.com/anniesnoopymd"></div></a>
+            <a href="https://github.com/anniesnoopymd"><div class="col-sm-2 circle circle2"></div></a>
+            <div class="col-sm-2 circle circle3"><a href="https://www.linkedin.com/in/%E4%BA%9E%E8%8A%B8-%E8%94%A1-9629b4112/"></a></div>
+            <div class="col-sm-2 circle circle4"><a href="http://codepen.io/anniesnoopymd/collections/popular/"></a></div>
+            <div class="col-sm-2 circle circle5"><a href="http://tw.blog.voicetube.com/archives/author/annie-tsai"></a></div>
+            <div class="col-sm-2 circle circle6"><a href="https://www.facebook.com/anniesnoopymd"></a></div>
+          </div>
+      </div>
+  </div>
+  </section>
+
+  <section id="section_work">
+    <div id="content">
+      <h1>WORK EXPERENCES</h1>
+    <ul class="timeline">
+      <li class="event" data-date="2017/8-now">
+        <h3>Front End Developer</h3>
+        <h4>UKEAS</h4>
+        <p></p>
+      </li>
+      <li class="event" data-date="2016/12-2017/7">
+        <h3>Content Editorial Intern</h3>
+        <h4>VoiceTube</h4>
+
+        <h3>Marketing Intern</h3>
+        <h4>VoiceTube</h4>
+        <p>- Analyze user experience of HERO<br>
+  - Perform marketing tasks, including but not limited to: writing articles, visual designing, using digital marketing tools, developing strategy.<br>
+  - 42% of articles are reprinted by influential media: Business Weekly; MANAGER today; Cheers ; The News Lens<br>
+  - Analyze collected data to study user behavior.</p>
+      </li>
+      <li class="event" data-date="2016/5-2017/1">
+        <h3>Assistant</h3>
+        <h4>Double Plus English</h4>
+        <p>Check students' homework, make sure they understand each part of the textbook.</p>
+      </li>
+      <li class="event" data-date="2016/11-2016/12">
+        <h3>Marketing Assistant</h3>
+        <h4>UUpon</h4>
+        <p>Validate users' EasyCard at each MRT station or YouBike station.</p>
+      </li>
+    </ul>
+  </div>
+
+  </section>
   <script>
   //header marquee
   function bannerSwitcher() {
@@ -403,6 +456,8 @@ function bannerSwitcher() {
     clearInterval(bannerTimer);
     bannerTimer = setInterval(bannerSwitcher, 5000)
   });
+
+
 
   //nav bar
   $(window).scroll(function(e){

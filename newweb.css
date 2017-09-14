@@ -2,7 +2,7 @@
 color-green: #84fab0
 color-blue: #8fd3f4
 color-gray: #444a47
-
+linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);;
 
 */
 
@@ -1141,12 +1141,12 @@ body a {
 #section-1 .content-slider .slider .banner .banner-inner-wrapper {
   height: 100%;
   padding-top: 6em;
-  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);;
+  background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   box-sizing: border-box;
 }
 #section-1 .content-slider .slider .banner .banner-inner-wrapper h2 {
   padding-bottom: 0.3em;
-  font-family: 'Kaushan Script', cursive;
+  /* font-family: 'Kaushan Script', cursive; */
   font-weight: 400;
   font-size: 2.5em;
   text-transform: none;
@@ -1262,7 +1262,7 @@ body a {
 #section-1 .content-slider #banner3:checked ~ nav label:nth-of-type(3),
 #section-1 .content-slider #banner4:checked ~ nav label:nth-of-type(4) {
   cursor: default;
-  color: #373737;
+  color: #444a47;
   transition: all .5s;
 }
 #section-1 .content-slider #banner1:checked ~ nav label:nth-of-type(1) .progressbar,
@@ -1488,7 +1488,7 @@ h1 span, h2 span {
   opacity: 0;
   animation-name: titleAnimation;
   animation-timing-function: ease;
-  animation-duration: 4s;
+	animation: 4s infinite;
 }
 
 h1 span {
@@ -1499,7 +1499,7 @@ h1 span:first-child {
   animation-delay: 0.7s;
 }
 h1 span:last-child {
-  color: #373737;
+  color: #444a47;
   animation-delay: 0.5s;
 }
 
@@ -1547,6 +1547,166 @@ h1 span:last-child {
 img{
 
 	width: 300px;
-	margin-top: 60px;
+	margin-top: -20px;
   margin-left: 750px;
+}
+.bannder2-title{
+	margin-top: 40px;
+}
+section#section_about{
+	height: 250px;
+	background-color: #fff;
+	background-color: #f4f5f4;
+	z-index: 99;
+
+	position: relative;
+}
+section#section_about p{
+	font-family: 'Teko', sans-serif;
+	color: #444a47;
+	font-size: 40px;
+	text-align: center;
+	margin-top: 30px;
+}
+section#section_about .row{
+	margin-left: 60px;
+	margin-right: 60px;
+
+
+}
+.circle{
+	width: 50px;
+	height: 50px;
+	/* border-radius: 50%;
+	background-color: #f17b0e; */
+  margin-right: 40px;
+
+}
+.circle1{
+	background-image: url("images/medium.svg");
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 20px;
+	margin-left: 25%;
+}
+
+.circle2{
+	background-image: url("images/github-logo.svg");
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 20px;
+
+}
+.circle3{
+	background-image: url("images/linkedin-logo.svg");
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 20px;
+
+}
+.circle4{
+	background-image: url("images/3d-outlined-shape.svg");
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 20px;
+
+}
+.circle5{
+	background-image: url("images/voicetube.png");
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 20px;
+
+}
+.circle6{
+	background-image: url("images/facebook-logo.svg");
+	-webkit-background-size: cover;
+	background-size: cover;
+	padding: 20px;
+
+}
+timeline
+#content {
+  margin-top: 50px;
+  text-align: center;
+}
+Timeline
+#content h1{
+	font-family: 'Teko', sans-serif;
+	color: #f17b0e;
+	font-size: 60px;
+	padding-top: 50px;
+
+}
+
+.timeline {
+  border-left: 4px solid #f17b0e;
+  border-bottom-right-radius: 4px;
+  border-top-right-radius: 4px;
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);;;
+  color: rgba(255, 255, 255, 0.8);
+	box-shadow: 10px 10px 15px #888888;
+
+  margin: 80px auto;
+	margin-left: 25%;
+  letter-spacing: 0.5px;
+  position: relative;
+  line-height: 1.4em;
+  font-size: 1.03em;
+  padding: 50px;
+  list-style: none;
+  text-align: left;
+  font-weight: 100;
+  max-width: 60%;
+}
+.timeline h1,
+.timeline h2,
+.timeline h3 {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 1.5px;
+  font-weight: 100;
+  font-size: 1.4em;
+}
+.timeline .event {
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  position: relative;
+}
+.timeline .event:last-of-type {
+  padding-bottom: 0;
+  margin-bottom: 0;
+  border: none;
+}
+.timeline .event:before,
+.timeline .event:after {
+  position: absolute;
+  display: block;
+  top: 0;
+}
+.timeline .event:before {
+  left: -217.5px;
+  color: rgba(255, 255, 255, 0.4);
+  content: attr(data-date);
+  text-align: right;
+  font-weight: 100;
+  min-width: 120px;
+}
+.timeline .event:after {
+  box-shadow: 0 0 0 4px #f17b0e;
+  left: -57.85px;
+  background: #313534;
+  border-radius: 50%;
+  height: 11px;
+  width: 11px;
+  content: "";
+  top: 5px;
+}
+.timeline p{
+	line-height: 30px;
+	font-size: 16px;
+}
+li[data-date]{
+	font-size: 17px;
+	color: #000;
 }
