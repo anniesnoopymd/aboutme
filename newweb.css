@@ -1562,11 +1562,12 @@ section#section_about{
 	position: relative;
 }
 section#section_about p{
-	font-family: 'Teko', sans-serif;
+	font-family: 'Fredoka One', cursive;
 	color: #fff;
-	font-size: 40px;
+	font-size: 30px;
 	text-align: center;
 	margin-top: 30px;
+	margin-bottom: 30px;
 }
 section#section_about .row{
 	margin-left: 60px;
@@ -1632,7 +1633,7 @@ timeline
 }
 Timeline
 #content h1{
-	font-family: 'Teko', sans-serif;
+	font-family: 'Fredoka One', cursive;
 	color: #f17b0e;
 	font-size: 60px;
 	padding-top: 50px;
@@ -1686,7 +1687,8 @@ Timeline
 }
 .timeline .event:before {
   left: -217.5px;
-  color: rgba(255, 255, 255, 0.4);
+  color: #000;
+	font-size: 20px;
   content: attr(data-date);
   text-align: right;
   font-weight: 100;
@@ -1710,9 +1712,93 @@ li[data-date]{
 	font-size: 17px;
 	color: #fff;
 }
+.work_title{
+	margin-left: 50px;
+	margin-top: -80px;
+	font-size: 60px;
+}
+.blue{
+	width: 350px;
+	height: 50px;
+	background-color: #8fd3f4;
+	margin-left: 300px;
+	margin-top: 80px;
+	background-attachment: fixed;
+}
+#section_count{
+	height: 350px;
+	/* background-color: #8fd3f4; */
+	margin-bottom: 100px;
+}
+
+.col_half { width: 49%; }
+.col_third { width: 32%; }
+.col_fourth { width: 23.5%; }
+.col_fifth { width: 18.4%; }
+.col_sixth { width: 15%; }
+.col_three_fourth { width: 74.5%;}
+.col_twothird{ width: 66%;}
+.col_half,
+.col_third,
+.col_twothird,
+.col_fourth,
+.col_three_fourth,
+.col_fifth{
+	position: relative;
+	display:inline;
+	display: inline-block;
+	float: left;
+	margin-right: 2%;
+	margin-bottom: 20px;
+}
+.end {
+	margin-right: 0 !important;
+}
+/* Column Grids End */
 
 
+.wrapper {
+	width: 1200px;
+	margin: 50px auto 0;
+	margin-left: 10%;
+	position: relative;
 
+}
+.counter {
+	/* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+	/* padding: 20px 0; */
+	/* background-color: #8fd3f4; */
+	border-radius: 5px;
+	display: inline-block;
+}
+.count-title {
+	font-size: 80px;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 0;
+	text-align: center;
+	font-family: 'Teko', sans-serif;
+}
+.count-text {
+	font-size: 32px;
+	font-weight: normal;
+	margin-top: 10px;
+	margin-bottom: 0;
+	text-align: center;
+	font-family: 'Teko', sans-serif;
+}
+.fa-2x {
+	margin: 0 auto;
+	float: none;
+	display: table;
+	color: #4ad1e5;
+}
+
+#section_work{
+	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+	margin-top: -100px;
+	height: 1200px;
+}
 
 
 
@@ -1767,6 +1853,6 @@ footer{
   border-radius: 5px;
   /* box-shadow: 0 0 7px #222;
   text-shadow: 0 0 3px #fff; */
-	font-size: 17px;
+	font-size: 20px;
 	font-family: 'Teko', sans-serif;
 }
