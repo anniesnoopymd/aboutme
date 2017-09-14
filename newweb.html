@@ -14,6 +14,8 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
   <script src="https://use.fontawesome.com/8ae46bccf5.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.1.0/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FitText.js/1.1/jquery.fittext.min.js"></script>
 </head>
 <!-- <body>
   <nav class="navbar navbar-default navbar-fixed-top at_top">
@@ -344,8 +346,7 @@ function bannerSwitcher() {
       <input type="radio" id="banner2" class="sec-1-input" name="banner">
       <input type="radio" id="banner3" class="sec-1-input" name="banner">
       <input type="radio" id="banner4" class="sec-1-input" name="banner">
-      <input type="radio" id="banner5" class="sec-1-input" name="banner">
-      <input type="radio" id="banner6" class="sec-1-input" name="banner">
+
       <div class="slider">
         <div id="top-banner-1" class="banner">
           <div class="banner-inner-wrapper">
@@ -369,24 +370,24 @@ function bannerSwitcher() {
         <div id="top-banner-3" class="banner">
           <div class="banner-inner-wrapper">
             <h2 class="title">jQuery/VueJS/HTML/CSS</h2>
-            <h1 class="title">Are languages I'm interested in.</h1>
+            <h3 class="title">Are languages I'm interested in.</h3>
 
           </div>
         </div>
         <div id="top-banner-4" class="banner">
           <div class="banner-inner-wrapper">
-            <h2>Our Contacts</h2>
-            <h1>Welcome<br>to MoGo</h1>
+            <h2 class="title">Let's start the journey</h2>
+            <h1 class="title">Read my stories</h1>
 
           </div>
         </div>
       </div>
       <nav>
         <div class="controls">
-          <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span>01</span> Intro</label>
-          <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span>02</span> Work</label>
-          <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span>03</span> About</label>
-          <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span>04</span> Contacts</label>
+          <label for="banner1"><span class="progressbar"><span class="progressbar-fill"></span></span><span>01</span> </label>
+          <label for="banner2"><span class="progressbar"><span class="progressbar-fill"></span></span><span>02</span> </label>
+          <label for="banner3"><span class="progressbar"><span class="progressbar-fill"></span></span><span>03</span> </label>
+          <label for="banner4"><span class="progressbar"><span class="progressbar-fill"></span></span><span>04</span> </label>
         </div>
       </nav>
     </div>
@@ -442,6 +443,16 @@ function bannerSwitcher() {
   </div>
 
   </section>
+
+  <footer>
+    <div class="marquee-wrap" type="bottom-to-top">
+      <ul class="marquee-content">
+        <li>Made by Annie</li>
+        <li>MIT License</li>
+      </ul>
+    </div>
+    <div id="clock" class="clock"></div>
+  </footer>
   <script>
   //header marquee
   function bannerSwitcher() {
@@ -475,6 +486,146 @@ function bannerSwitcher() {
    },500);
 
   });
+
+  //marquee-wrap
+  (function ($) {
+  $.fn.marquee = function( setting ){
+
+    function rightToLeft( wrap, content, speed ){
+      var width = 0;
+
+      // 将内容复制四份，已解决单条公告循环滚动的问题
+      content.append( content.html() );
+      content.append( content.html() );
+
+
+      content.find('li').each(function () {
+        width += $(this).outerWidth();
+      })
+
+      content.width( width );
+
+
+      function run() {
+          if( wrap.scrollLeft() - (content.width() / 2) >= 0 ){
+              wrap.scrollLeft( 0 );
+          }else{
+              wrap.scrollLeft( wrap.scrollLeft() + 1 );
+          }
+      }
+
+      var timer = setInterval( run, speed );
+
+      wrap.mouseover( function () {
+          clearInterval( timer );
+      } )
+
+      wrap.mouseout( function () {
+          timer = setInterval( run, speed );
+      } )
+
+    }
+
+    function bottomToTop( wrap, content, speed ) {
+        var noticeLength = content.find( 'li' ).length;
+        var i = 0;
+
+        function run() {
+            content.animate({
+                top: -i * wrap.height()
+            }, function () {
+                if( i < noticeLength-1 ){
+                    i++;
+                }else{
+                    i = 0;
+                }
+            })
+        }
+
+        var timer = setInterval( run, speed );
+        wrap.mouseover( function () {
+            clearInterval( timer );
+        } )
+        wrap.mouseout( function () {
+            timer = setInterval( run, speed );
+        } )
+    }
+
+    function leftToRight( wrap, content, speed ){
+      var width = 0;
+
+      // 将内容复制四份，已解决单条公告循环滚动的问题
+      content.append( content.html() );
+      content.append( content.html() );
+
+      content.find('li').each(function () {
+        width += $(this).outerWidth();
+      })
+
+      content.width( width );
+      wrap.scrollLeft( content.width() )
+
+      function run() {
+          if( wrap.scrollLeft() - (content.width() / 2) == 0 ){
+            wrap.scrollLeft( content.width() );
+          }else{
+            wrap.scrollLeft( wrap.scrollLeft() - 1 );
+          }
+      }
+
+      var timer = setInterval( run, speed );
+
+      wrap.mouseover( function () {
+          clearInterval( timer );
+      } )
+
+      wrap.mouseout( function () {
+          timer = setInterval( run, speed );
+      } )
+    }
+
+    return this.each(function(){
+      var wrap = $(this);
+      var content = wrap.find( setting.container );
+
+      var animateType = wrap.attr('type');
+
+      if ( animateType == 'right-to-left' ){
+        content.addClass( animateType );
+        rightToLeft( wrap, content, setting.speed );
+      }
+
+      if ( animateType == 'left-to-right' ){
+        content.addClass( animateType );
+        leftToRight( wrap, content, setting.speed );
+      }
+
+      if ( animateType == 'static' ){
+          content.addClass( animateType );
+      }
+
+      if ( animateType == 'bottom-to-top' ){
+          content.addClass( animateType );
+          bottomToTop( wrap, content, setting.speed );
+      }
+
+    })
+  }
+})(jQuery)
+
+  var setting = {
+    container: '.marquee-content',
+    speed: 50
+  }
+  $('.marquee-wrap').marquee( setting );
+  //
+  //clock
+  $('#clock').fitText(1.3);
+    function update() {
+      $('#clock').html(moment().format('D MMMM YYYY'));
+    }
+
+    setInterval(update, 1000);
   </script>
 </body>
 </html>
