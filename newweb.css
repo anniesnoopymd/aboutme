@@ -2364,9 +2364,20 @@ footer{
 .code_title {
   font-size: 1em;
   width: 70%;
-  background-color: #FBA504;
-  color: #fff;
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  color: #444444;
   padding: 5px;
   border: 2px solid #444444;
-  box-shadow: 3px 3px 0 #FBA504;
+  box-shadow: 3px 3px 0 #8fd3f4;
+  transition-duration: .5s;
+}
+.code_title:hover {
+  font-size: 1em;
+  width: 70%;
+  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  color: #444444;
+  padding: 5px;
+  border: 2px solid #444444;
+  box-shadow: 4px 4px 0 #8fd3f4;
+  margin: -5px;
 }
