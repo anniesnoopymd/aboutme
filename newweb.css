@@ -2364,7 +2364,7 @@ footer{
 .code_title {
   font-size: 1em;
   width: 70%;
-  background: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
+  /* background: #8fd3f4; */
   color: #444444;
   padding: 5px;
   border: 2px solid #444444;
