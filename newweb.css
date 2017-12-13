@@ -346,6 +346,10 @@ li[data-date]{
 	font-size: 17px;
 
 }
+
+.timeline h3{
+  color: #4ad1e5;
+}
 section_skill
 #section_skill{
 	background-color: #fff;
@@ -1800,8 +1804,8 @@ li[data-date]{
 }
 
 #section_work{
-	background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-	margin-top: 0px;
+	/* background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+	margin-top: 100px;
 	height: 1200px;
 }
 
@@ -2130,7 +2134,7 @@ footer{
   background-size: cover;
   overflow: hidden;
   height: 250px;
-  margin-left: -30px;
+  margin-left: -50px;
   margin-top: -10px;
   margin-bottom: 20px;
   transition-duration: 0.5s;
@@ -2380,4 +2384,8 @@ footer{
   border: 2px solid #444444;
   box-shadow: 4px 4px 0 #8fd3f4;
   margin: -5px;
+}
+
+.linked_img{
+  margin-top: -300px;
 }
